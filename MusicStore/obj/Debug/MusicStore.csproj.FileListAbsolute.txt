@@ -19,13 +19,9 @@ C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\Microsoft.DiaSymRea
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\Microsoft.Managed.Core.targets
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Text.Encoding.CodePages.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.ValueTuple.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\vbc.exe
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\vbc.exe.config
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\vbc.rsp
@@ -53,7 +49,6 @@ C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\System.Web.WebPages.Razor.
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\Newtonsoft.Json.xml
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\Antlr3.Runtime.pdb
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\source\repos\MusicStore\MusicStore\obj\Debug\MusicStore.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\MusicStore\MusicStore\obj\Debug\MusicStore.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\MusicStore\MusicStore\obj\Debug\MusicStore.csproj.CopyComplete
 C:\Users\Admin\source\repos\MusicStore\MusicStore\obj\Debug\MusicStore.dll
@@ -89,3 +84,4 @@ C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Buffers.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Memory.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\source\repos\MusicStore\MusicStore\obj\Debug\MusicStore.csproj.AssemblyReference.cache

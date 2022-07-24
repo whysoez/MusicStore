@@ -30,9 +30,14 @@ namespace MusicStore.Controllers
             {
                 if (Membership.ValidateUser(model.UserName, model.Password))
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                    MigrateShoppingCart(model.UserName);
+
+                    FormsAuthentication.SetAuthCookie(model.UserName,
+                        model.RememberMe);
+                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1
+                        && returnUrl.StartsWith("/")
+                        && !returnUrl.StartsWith("//") &&
+                        !returnUrl.StartsWith("/\\"))
                     {
                         return Redirect(returnUrl);
                     }
@@ -46,7 +51,6 @@ namespace MusicStore.Controllers
                     ModelState.AddModelError("", "The user name or password provided is incorrect.");
                 }
             }
-
             // If we got this far, something failed, redisplay form
             return View(model);
         }
@@ -71,7 +75,6 @@ namespace MusicStore.Controllers
 
         //
         // POST: /Account/Register
-
         [HttpPost]
         public ActionResult Register(RegisterModel model)
         {
@@ -79,11 +82,16 @@ namespace MusicStore.Controllers
             {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, "question", "answer", true, null, out createStatus);
+                Membership.CreateUser(model.UserName, model.Password, model.Email,
+                       "question", "answer", true, null, out
+                       createStatus);
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
+                    MigrateShoppingCart(model.UserName);
+
+                    FormsAuthentication.SetAuthCookie(model.UserName, false /*
+                  createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -91,7 +99,6 @@ namespace MusicStore.Controllers
                     ModelState.AddModelError("", ErrorCodeToString(createStatus));
                 }
             }
-
             // If we got this far, something failed, redisplay form
             return View(model);
         }
@@ -187,6 +194,14 @@ namespace MusicStore.Controllers
                 default:
                     return "An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
             }
+        }
+        private void MigrateShoppingCart(string UserName)
+        {
+            // Associate shopping cart items with logged-in user
+            var cart = ShoppingCart.GetCart(this.HttpContext);
+
+            cart.MigrateCart(UserName);
+            Session[ShoppingCart.CartSessionKey] = UserName;
         }
         #endregion
     }

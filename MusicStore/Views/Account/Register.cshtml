@@ -1,4 +1,4 @@
-﻿@model MusicStore.Models.re
+﻿@model MusicStore.Models.RegisterModel
 
 @{
     ViewBag.Title = "Register";
@@ -38,7 +38,7 @@
             </div>
 
             <div class="editor-label">
-                @Html.LabelFor(m => m.Password)
+                @Html.LabelFor(m=>m.Password)
             </div>
             <div class="editor-field">
                 @Html.PasswordFor(m => m.Password)

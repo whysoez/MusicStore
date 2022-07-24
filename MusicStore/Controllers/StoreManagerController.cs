@@ -10,6 +10,16 @@ using MusicStore.Models;
 
 namespace MusicStore.Controllers
 {
+    public class Myauthorize: AuthorizeAttribute
+    {
+        protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
+        {
+            filterContext.Result = new RedirectResult("/account/logon");
+        }
+    }
+
+    //[Authorize(Roles = "Administrator")]
+    [Myauthorize(Roles ="Administrator")]
     public class StoreManagerController : Controller
     {
         private MusicStoreEntities db = new MusicStoreEntities();
