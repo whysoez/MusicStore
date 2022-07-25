@@ -7,7 +7,7 @@ using MusicStore.Models;
 
 namespace MusicStore.Controllers
 {
-    [Authorize]
+    [Myauthorize]
     public class CheckoutController : Controller
     {
         MusicStoreEntities storeDB = new MusicStoreEntities();

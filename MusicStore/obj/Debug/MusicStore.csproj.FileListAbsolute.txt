@@ -85,3 +85,5 @@ C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Memory.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Admin\source\repos\MusicStore\MusicStore\obj\Debug\MusicStore.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\System.Data.SqlClient.dll
+C:\Users\Admin\source\repos\MusicStore\MusicStore\bin\System.Data.SqlClient.xml
